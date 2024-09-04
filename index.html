@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cinza: {
+                            input: '#333333'
+                        },
+                        preto: {
+                            puro: '#000000'
+                        },
+                        branco: {
+                            puro: '#FFFFFF'
+                        },
+                        vermelho: {
+                            escuro: '#8B0000',
+                            bordo: '#580000',
+                            vinho: '#250000'
+                        },
+                        amarelo: {
+                            citrico: '#FFA500',
+                            dourado: '#FFD700'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-image: url('/assets/Layx.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .granulado-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('/assets/Granulado.svg');
+            background-size: cover;
+            background-repeat: repeat;
+            opacity: 0.5;
+            pointer-events: none;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body class="flex justify-center items-center h-screen">
+
+    <main class="px-6 flex w-3/4">
+        <section class="hidden lg:block lg:rounded-l-xl lg:w-1/2">
+            <img class="w-full h-full object-cover" src="assets/Esquerdo.svg" alt="Imagem do Jogo">
+        </section>
+
+        <section
+            class="bg-gradient-to-b from-amarelo-citrico to-amarelo-dourado flex flex-col justify-center rounded-xl lg:rounded-l-none lg:w-1/2 p-10">
+            <div class="flex flex-col items-center text-center gap-2 ">
+                <img class="size-14" src="assets/Icon.svg" alt="Icone da Empresa">
+                <img class="w-56" src="assets/Titulo.svg" alt="Titulo do Jogo">
+                <p class="w-4/5 font-medium text-xl text-preto-puro opacity-85">Cadastre-se agora E seja o primeiro
+                    a explorar os mistérios sombrios que aguardam em Mason Ridge!</p>
+            </div>
+
+            <form>
+                <div class="pt-7 flex flex-col gap-1">
+                    <label class="text-sm text-preto-puro font-medium" for="email">Email</label>
+                    <input
+                        class="w-78 bg-cinza-input border border-preto-puro rounded-sm text-branco-puro text-opacity-75 text-sm py-2 pl-2"
+                        placeholder="Digite seu endereço de email" type="email" name="" id="">
+                </div>
+            </form>
+
+            <button
+                class="mt-2 p-1 rounded-full bg-gradient-to-r from-vermelho-escuro via-vermelho-bordo to-vermelho-vinho min-w-56 w-full text-xl font-bold text-branco-puro transition duration-300 ease-in-out hover:opacity-90 hover:scale-105">
+                Cadastre-se
+            </button>
+
+            <div class="hidden lg:flex mb-4 mt-8 gap-3 justify-center">
+                <a href="https://www.instagram.com/crown_studioss/" target="_blank">
+                    <img src="assets/_Instagram.svg" alt="Icone Instagram">
+                </a>
+                <a href="https://www.linkedin.com/company/crovvn-studios/posts/?feedView=all" target="_blank">
+                    <img src="assets/_Linkedin.svg" alt="Icone _Linkedin">
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <div class="granulado-overlay"></div>
+
+</body>
+
+</html>
